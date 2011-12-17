@@ -1,0 +1,19 @@
+[2011-12-17 17:44:31 CET/Data/INFO] Starting data engine
+[2011-12-17 17:44:31 CET/Data/DEBUG] Data engine successfully started
+[2011-12-17 17:44:31 CET/Reporting/INFO] Starting reporting engine
+[2011-12-17 17:44:33 CET/ContractEngine/INFO] Starting contract engine
+[2011-12-17 17:44:33 CET/ContractEngine/DEBUG] Reading prelude definitions from "defs/contracts/Prelude.csl"
+[2011-12-17 17:44:33 CET/ContractEngine/DEBUG] Contract engine successfully started
+[2011-12-17 17:44:33 CET/RuleEngine/INFO] Starting rule engine
+[2011-12-17 17:44:33 CET/RuleEngine/DEBUG] Reading rule sets from "/home/ronni/bsc/nuERP/rules/"
+[2011-12-17 17:44:33 CET/RuleEngine/DEBUG] Reading rule sets succeeded (0 rule sets parsed)
+[2011-12-17 17:44:33 CET/RuleEngine/DEBUG] Rule engine successfully started
+[2011-12-17 17:44:33 CET/EventLog/INFO] Starting event log
+[2011-12-17 17:44:33 CET/EventLog/DEBUG] Bootstrapping system from "/home/ronni/bsc/nuERP/events/events.log"
+[2011-12-17 17:44:33 CET/EventLog/INFO] Event log successfully started
+[2011-12-17 17:44:33 CET/PServer/INFO] Starting Server on port 7911
+[2011-12-17 17:44:38 CET/PServer/DEBUG] addDataDefinitions: Agent is a Data.
+Me is a Agent.
+
+[2011-12-17 17:44:38 CET/PServer/DEBUG] getRecordDefinition: Me
+[2011-12-17 17:44:38 CET/PServer/DEBUG] createEntity: Me, Me

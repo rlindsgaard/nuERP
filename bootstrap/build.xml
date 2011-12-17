@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="client" default="javac" basedir=".">
+	<!-- Arguments to gwtc and devmode targets -->
+
+	<property name="poetsio.dir" value="./../poetsio" />
+	<property name="javalib.dir" value="lib" />
+	
+	<path id="project.class.path">
+		<pathelement location="bin" />
+	</path>
+
+	<target name="poetsio" description="Build the poetsio.jar">
+		<ant antfile="build.xml" target="dist" dir="${poetsio.dir}" inheritall="false"/>
+		<mkdir dir="${javalib.dir}"/>
+		<copy todir="${javalib.dir}">
+			<fileset dir="${poetsio.dir}/dist" includes="poetsio.jar"/>
+			<fileset dir="${poetsio.dir}/lib" includes="libthrift*.jar,slf4j-*jar"/>
+		</copy>
+	</target>
+
+	<target name="javac" depends="poetsio" description="Compile java source">
+		<mkdir dir="bin" />
+		<javac srcdir="src" includes="**" encoding="utf-8"
+				destdir="bin/"
+				debug="true" debuglevel="lines,vars,source" includeantruntime="false">
+			<classpath>
+				<path refid="project.class.path"/>
+				<fileset dir="${javalib.dir}">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="boot" depends="javac" description="Run bootstrap">
+		<java classname="dk.diku.poets.bootstrap.Bootstrap" fork="true">
+			<arg value="setup.ini"/>
+			<classpath>
+				<path refid="project.class.path"/>
+				<fileset dir="${javalib.dir}">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+</project>
