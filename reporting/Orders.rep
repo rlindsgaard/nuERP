@@ -1,0 +1,7 @@
+name: Orders
+description: 
+  Makes out a list of all orders placed in the system
+tags: external
+
+report : [PutContract]
+report = filter (\x -> x.contract.templateName == "sale") contracts 

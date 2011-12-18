@@ -1,0 +1,6 @@
+name: Customers
+description: A list of all customers in the database
+tags: external
+
+report : [<Customer>]
+report = [c | c : <Customer> <- map (\e -> e.1) entities]
