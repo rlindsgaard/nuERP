@@ -1,2 +1,59 @@
 Agent is a Data.
-Me is a Agent.
+Me is an Agent.
+Vendor is an Agent.
+Customer is an Agent.
+
+ResourceType is a Data.
+ResourceType is abstract.
+
+Resource is a Data.
+
+Item is a Resource.
+Item has a ProductType.
+Item has a Double called quantity.
+
+ItemType is a ResourceType.
+ItemType is abstract.
+
+ProductType is a ResourceType.
+ProductType has a String called name.
+ProductType has a String called description.
+ProductType is abstract.
+
+Attribute is a Data.
+Attribute is abstract.
+
+WeightUnit is a Data.
+WeightUnit is abstract.
+
+Kilogram is a WeightUnit.
+
+Weight is an Attribute.
+Weight has a Double called amount.
+Weight has a WeightUnit called unit.
+
+Color is an Attribute.
+Color has a ColorType.
+
+ColorType is a Data.
+ColorType is abstract.
+
+Red is a ColorType.
+Green is a ColorType.
+
+TangibleProduct is a ProductType.
+
+ServiceProduct is a ProductType.
+Money is a Resource.
+Money has a Double called amount.
+Money has a Currency called currency.
+
+Currency is a ResourceType.
+Currency is abstract.
+
+DKK is a Currency.
+
+OrderLine is Data.
+OrderLine has an Item.
+OrderLine has Money called unitPrice.
+OrderLine has a Double called vatPercentage.
