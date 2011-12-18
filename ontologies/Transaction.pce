@@ -1,0 +1,20 @@
+BiTransaction is a Transaction.
+BiTransaction is abstract.
+BiTransaction has an Agent entity called sender.
+BiTransaction has an Agent entity called receiver.
+
+Transfer is a BiTransaction.
+Transfer is abstract.
+
+Delivery is a Transfer.
+Delivery has a list of Item called items.
+
+IssueInvoice is a BiTransaction.
+IssueInvoice has a list of OrderLine called orderLines.
+
+Payment is a Transfer.
+Payment has Money.
+Payment is abstract.
+
+CashPayment is a Payment.
+CreditCardPayment is a Payment.

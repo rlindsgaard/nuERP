@@ -1,0 +1,11 @@
+
+fun checkAmount m orderLines =
+  let a = foldr (\x acc ->
+            if (x.unitPrice).currency == m.currency then
+              (x.item).quantity * (100 + x.vatPercentage) * (x.unitPrice).amount + acc
+            else
+              acc) 0 orderLines
+  in
+  m.amount * 100 == a
+
+val me = reports.me ()
