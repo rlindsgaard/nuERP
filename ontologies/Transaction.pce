@@ -18,3 +18,5 @@ Payment is abstract.
 
 CashPayment is a Payment.
 CreditCardPayment is a Payment.
+
+DoNothing is a Transfer.

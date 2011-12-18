@@ -1,4 +1,0 @@
-<record xmlns="http://poets.diku.dk/values" name="AddDataDefs"><field name="defs"><string value="Agent is a Data.
-Me is a Agent.
-" /></field><field name="internalTimeStamp"><datetime value="2011-12-17T16:44:38.713416Z" /></field></record>
-<record xmlns="http://poets.diku.dk/values" name="CreateEntity"><field name="data"><record name="Me" /></field><field name="ent"><reference name="Me" refId="0" /></field><field name="internalTimeStamp"><datetime value="2011-12-17T16:44:38.746007Z" /></field><field name="recordType"><string value="Me" /></field></record>

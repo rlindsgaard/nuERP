@@ -1,0 +1,25 @@
+isMe : <Agent> -> Bool
+isMe a = a :? <Me>
+
+-- Product normalised list of all items given in list
+normaliseItems : [Item] -> [Item]
+normaliseItems its = [Item{productType = i.1, quantity = sum (map (\is -> is.quantity) i.2)} |
+  i <- groupProj (\is -> is.productType) its]
+
+invoices : [(Int, IssueInvoice)]
+invoices = [(tr.contractId,inv) |
+  tr <- transactionEvents,
+  inv : IssueInvoice = tr.transaction]
+
+invoicesSent : [(Int, IssueInvoice)]
+invoicesSent = filter (\inv -> isMe inv.2.sender && not (isMe inv.2.receiver)) invoices
+
+itemsReceived : [Item]
+itemsReceived = normaliseItems [is |
+  tr <- transactionEvents,
+  del : Delivery = tr.transaction,
+  not(isMe del.sender) && isMe del.receiver,
+  is <- del.items]
+
+itemsSold : [Item]
+itemsSold = normaliseItems [line.item | inv <- invoicesSent, line <- inv.2.orderLines]
