@@ -4,19 +4,18 @@ Me is an Agent.
 
 Vendor is an Agent.
 
-Customer is an Agent.
-Customer has a String called name.
-Customer has an Address called address.
-
-Address is a Data.
-Address has a String called street.
-Address has a Country called country.
-Address has a String called city.
-
 Country is Data.
-Country is abstract.
+Countru is abstract.
 
 Denmark is a Country.
+
+Address is Data.
+Address has a Country.
+
+Customer is an Agent.
+Customer has a String called name.
+Customer has an Address called billingAddress.
+Customer has an Address called deliveryAddress.
 
 ResourceType is Data.
 ResourceType is abstract.
