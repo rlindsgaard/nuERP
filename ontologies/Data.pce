@@ -24,28 +24,6 @@ ResourceType is abstract.
 Resource is Data.
 
 Item is a Resource.
-Item has a ProductType
-
-ProductType is a ResourceType.
-ProductType has a String called Name.
-ProductType is abstract.
-
-TangibleProduct is a ProductType.
-TangibleProduct has a Double called quantity.
-TangibleProduct has a Double called Weight.
-TangibleProdut is abstract.
-
-
-ServiceProduct is a ProductType.
-ServiceProduct is abstract.
-
-Repair is a ServiceProduct.
-Cleaning
-Repair has a TangibleProduct called item.
-
-
--- Old ontology
-Item is a Resource.
 Item has a ProductType.
 
 ProductType is a ResourceType.
@@ -72,12 +50,21 @@ Red is a Color.
 Green is a Color.
 
 TangibleProduct is a ProductType.
-TangibleProduct has Weight called weight.
-TangibleProduct is abstract.
+TangibleProduct has a Double called quantity.
+TangibleProduct has a Double called weight.
+TangibleProdut is abstract.
 
 Rug is a TangibleProduct.
 Scarf is a TangibleProduct.
 Scarf has a Color called color.
+
+ServiceProduct is a ProductType.
+ServiceProduct is abstract.
+
+Repair is a ServiceProduct.
+Repair has a TangibleProduct called item.
+
+Cleaning is a ServiceProduct.
 
 Money is a Resource.
 Money has a Double called amount.
