@@ -10,7 +10,9 @@ Countru is abstract.
 Denmark is a Country.
 
 Address is Data.
+Address has a String called street.
 Address has a Country.
+Address has a String called city.
 
 Customer is an Agent.
 Customer has a String called name.
