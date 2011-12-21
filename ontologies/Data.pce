@@ -1,29 +1,41 @@
 Agent is a Data.
-Me is an Agent.
-Vendor is an Agent.
-Customer is an Agent.
 
-ResourceType is a Data.
+Me is an Agent.
+
+Vendor is an Agent.
+
+Customer is an Agent.
+Customer has a String called name.
+Customer has an Address called address.
+
+Address is a Data.
+Address has a String called street.
+Address has a Country called country.
+Address has a String called city.
+
+Country is Data.
+Country is abstract.
+
+Denmark is a Country.
+
+ResourceType is Data.
 ResourceType is abstract.
 
-Resource is a Data.
+Resource is Data.
 
 Item is a Resource.
 Item has a ProductType.
 Item has a Double called quantity.
-
-ItemType is a ResourceType.
-ItemType is abstract.
 
 ProductType is a ResourceType.
 ProductType has a String called name.
 ProductType has a String called description.
 ProductType is abstract.
 
-Attribute is a Data.
+Attribute is Data.
 Attribute is abstract.
 
-WeightUnit is a Data.
+WeightUnit is Data.
 WeightUnit is abstract.
 
 Kilogram is a WeightUnit.
@@ -33,17 +45,20 @@ Weight has a Double called amount.
 Weight has a WeightUnit called unit.
 
 Color is an Attribute.
-Color has a ColorType.
+Color is abstract.
 
-ColorType is a Data.
-ColorType is abstract.
-
-Red is a ColorType.
-Green is a ColorType.
+Red is a Color.
+Green is a Color.
 
 TangibleProduct is a ProductType.
+TangibleProduct has a Weight called weight.
+TangibleProduct is abstract.
 
-ServiceProduct is a ProductType.
+Rug is a TangibleProduct.
+
+Scarf is a TangibleProduct.
+Scarf has a Color called color.
+
 Money is a Resource.
 Money has a Double called amount.
 Money has a Currency called currency.
