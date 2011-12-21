@@ -3,7 +3,8 @@ isMe a = a :? <Me>
 
 -- Product normalised list of all items given in list
 normaliseItems : [Item] -> [Item]
-normaliseItems its = [Item{productType = i.1, quantity = sum (map (\is -> is.quantity) i.2)} |
+--normaliseItems its = [Item{productType = i.1, quantity = sum (map (\is -> is.quantity) i.2)} |
+normaliseItems its = [Item{productType = i.1} |
   i <- groupProj (\is -> is.productType) its]
 
 invoices : [(Int, IssueInvoice)]
