@@ -50,11 +50,10 @@ Red is a Color.
 Green is a Color.
 
 TangibleProduct is a ProductType.
-TangibleProduct has a Double called quantity.
-TangibleProduct has a Double called weight.
-TangibleProdut is abstract.
+TangibleProduct is abstract.
 
 Rug is a TangibleProduct.
+
 Scarf is a TangibleProduct.
 Scarf has a Color called color.
 
@@ -74,9 +73,16 @@ Currency is a ResourceType.
 Currency is abstract.
 
 DKK is a Currency.
+EUR is a Currency.
 
 OrderLine is Data.
-OrderLine has an Item.
+OrderLine is abstract.
 OrderLine has a Double called quantity.
 OrderLine has Money called unitPrice.
 OrderLine has a Double called vatPercentage.
+
+PurchaseOrderLine is an OrderLine.
+PurchaseOrderLine has a TangibleProduct.
+
+SaleOrderLine is an OrderLine.
+SaleOrderLine has an Item.
