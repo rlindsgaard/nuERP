@@ -8,15 +8,15 @@ Customer is an Agent.
 Customer has a String called name.
 Customer has an Address called address.
 
-Address is a Data.
-Address has a String called street.
-Address has a Country called country.
-Address has a String called city.
-
 Country is Data.
 Country is abstract.
 
 Denmark is a Country.
+
+Address is a Data.
+Address has a String called street.
+Address has a Country called country.
+Address has a String called city.
 
 ResourceType is Data.
 ResourceType is abstract.
@@ -72,3 +72,10 @@ OrderLine has an Item.
 OrderLine has a Double called quantity.
 OrderLine has Money called unitPrice.
 OrderLine has a Double called vatPercentage.
+
+DeliveryMethod is Data.
+DeliveryMethod is abstract.
+
+POST is DeliveryMethod.
+GLS is DeliveryMethod.
+

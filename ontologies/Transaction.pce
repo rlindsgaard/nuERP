@@ -7,6 +7,7 @@ Transfer is a BiTransaction.
 Transfer is abstract.
 
 Delivery is a Transfer.
+Delivery has a DeliveryMethod called method.
 Delivery has a list of Item called items.
 
 IssueInvoice is a BiTransaction.
