@@ -1,7 +1,7 @@
 Purchase is a Contract.
 Purchase has a Vendor entity.
-Purchase has a list of OrderLine called orderLines.
+Purchase has a list of PurchaseOrderLine called orderLines.
 
 Sale is a Contract.
 Sale has a Customer entity.
-Sale has a list of OrderLine called orderLines.
+Sale has a list of SaleOrderLine called orderLines.
