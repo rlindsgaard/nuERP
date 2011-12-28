@@ -8,4 +8,6 @@ fun checkAmount m orderLines =
   in
   m.amount * 100 == a
 
+fun lineItem x = Item{productType = x.tangibleProduct}
+
 val me = reports.me ()

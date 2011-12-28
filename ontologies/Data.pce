@@ -60,10 +60,12 @@ Scarf has a Color called color.
 ServiceProduct is a ProductType.
 ServiceProduct is abstract.
 
-Repair is a ServiceProduct.
-Repair has a TangibleProduct called item.
+TangibleServiceProduct is a ServiceProduct.
+TangibleServiceProduct has a TangibleProduct called item.
 
-Cleaning is a ServiceProduct.
+Repair is a TangibleServiceProduct.
+
+Cleaning is a TangibleServiceProduct.
 
 Money is a Resource.
 Money has a Double called amount.
