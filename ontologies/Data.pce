@@ -75,6 +75,7 @@ OrderLine has a Double called vatPercentage.
 
 DeliveryMethod is Data.
 DeliveryMethod has Money called cost.
+DeliveryMethod has a Duration called deadline.
 DeliveryMethod is abstract.
 
 Regular is DeliveryMethod.
