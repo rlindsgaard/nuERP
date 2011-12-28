@@ -74,6 +74,7 @@ OrderLine has Money called unitPrice.
 OrderLine has a Double called vatPercentage.
 
 DeliveryMethod is Data.
+DeliveryMethod has Money called cost.
 DeliveryMethod is abstract.
 
 Regular is DeliveryMethod.
