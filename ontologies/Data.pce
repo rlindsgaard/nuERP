@@ -76,6 +76,5 @@ OrderLine has a Double called vatPercentage.
 DeliveryMethod is Data.
 DeliveryMethod is abstract.
 
-POST is DeliveryMethod.
-GLS is DeliveryMethod.
-
+Regular is DeliveryMethod.
+Speed is DeliveryMethod.
