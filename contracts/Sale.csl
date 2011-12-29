@@ -9,8 +9,8 @@ clause sale(lines : [OrderLine])<me : <Me>, customer : <Customer>> =
  then
  payment(lines, me, 10m)<customer>
  and
- <me> Delivery(sender s, receiver r, items i)
-   where s == me && r == customer && i == map (\x -> x.item) lines
+ <me> Delivery(sender s, receiver r, orderLines l)
+   where s == me && r == customer && l == lines
    due within 1W
 
 clause payment(lines : [OrderLine], me : <Me>, deadline : Duration)<customer : <Customer>> = 

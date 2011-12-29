@@ -7,7 +7,7 @@ Transfer is a BiTransaction.
 Transfer is abstract.
 
 Delivery is a Transfer.
-Delivery has a list of Item called items.
+Delivery has a list of OrderLine called orderLines.
 
 IssueInvoice is a BiTransaction.
 IssueInvoice has a list of OrderLine called orderLines.

@@ -19,7 +19,29 @@ itemsReceived = normaliseItems [is |
   tr <- transactionEvents,
   del : Delivery = tr.transaction,
   not(isMe del.sender) && isMe del.receiver,
-  is <- del.items]
+  lines <- del.orderLines,
+  is <- lines.items]
 
 itemsSold : [Item]
 itemsSold = normaliseItems [line.item | inv <- invoicesSent, line <- inv.2.orderLines]
+
+deliveries : [Delivery]
+deliveries = [del |
+  tr <- transactionEvents,
+  del : Delivery = tr.transaction]
+
+itemStock : [[OrderLine]] -> [Stock]
+itemStock olss = [Stock{item = head [l.item | l <- ols], quantity = sum [l.quantity | l <- ols]} | 
+  ols <- olss]
+
+incomming : [Stock]
+incomming = itemStock (groupBy (\x y -> x.item == y.item) (sort [ls |
+  del <- deliveries,
+  not(isMe del.sender) && isMe del.receiver,
+  ls <- del.orderLines]))
+
+outgoing : [Stock]
+outgoing = itemStock (groupBy (\x y -> x.item == y.item) (sort [ls |
+  del <- deliveries,
+  isMe del.sender && not(isMe del.receiver),
+  ls <- del.orderLines]))

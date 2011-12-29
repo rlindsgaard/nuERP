@@ -1,2 +1,6 @@
 Inventory is a Report.
-Inventory has a list of Item called availableItems.
+Inventory has a list of Stock called stock.
+
+Stock is a Report.
+Stock has an Item called item.
+Stock has a Double called quantity.

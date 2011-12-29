@@ -68,7 +68,7 @@ Currency is abstract.
 DKK is a Currency.
 
 OrderLine is Data.
-OrderLine has an Item.
+OrderLine has an Item called item.
 OrderLine has a Double called quantity.
 OrderLine has Money called unitPrice.
 OrderLine has a Double called vatPercentage.

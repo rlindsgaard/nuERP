@@ -5,4 +5,6 @@ description:
 tags: external, inventory
 
 report : Inventory
-report = Inventory{availableItems = normaliseItems (itemsReceived ++ itemsSold)}
+report = Inventory{stock = [Stock{item = ins.item,
+quantity = ins.quantity - sum [outs.quantity | outs <- outgoing,
+outs.item == ins.item]}| ins <- incomming]}
